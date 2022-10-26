@@ -52,17 +52,26 @@ $ python3.10 dragon.py 10
           └─┘     └─┘
 
 $ python3.10 dragon.py --help
-usage: dragon.py [-h] [--x-step X_STEP] [--y-step Y_STEP] depth
+usage: dragon.py [-h] [--turns-only] [--x-step X_STEP]
+                 [--y-step Y_STEP] [--initial-direction {R,D,L,U}]
+                 DEPTH
 
 Draw a dragon curve.
 
 positional arguments:
-  depth                 Depth of the dragon curve to generate
+  DEPTH                 Depth of the dragon curve to generate
 
 options:
   -h, --help            show this help message and exit
+  --turns-only          Instead of drawing the curve, output the turns
+                        necessary for cli-draw to draw the curve
+                        (default: False)
   --x-step X_STEP, -x X_STEP
-                        x-axis scaling
+                        The number of columns a single x-axis step
+                        takes. (default: 2)
   --y-step Y_STEP, -y Y_STEP
-                        y-axis scaling
+                        The number of lines a single y-axis step
+                        takes. (default: 1)
+  --initial-direction {R,D,L,U}, -d {R,D,L,U}
+                        The starting direction of travel. (default: R)
 ```
