@@ -1,0 +1,3 @@
+[submodule "cli-draw"]
+	path = cli-draw
+	url = git@github.com:angus-lherrou/cli-draw.git
