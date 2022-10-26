@@ -6,7 +6,6 @@ from cli_draw import Direction, Turn, draw
 class Dragon:
     def __init__(self, depth: int):
         self.turns = []
-        self.dir: Direction = Direction.R
         self.trace(depth)
 
     def trace(self, depth: int):
@@ -20,7 +19,6 @@ class Dragon:
 
     def write(self, turn: Turn):
         self.turns.append(turn)
-        self.dir = self.dir.turn(turn)
 
 
 def main(depth: int = 5,
